@@ -35,13 +35,16 @@ let productsCopy=products.slice();
 if(category.length>0){
 productsCopy=productsCopy.filter(item=>category.includes(item.category));
 }
+
+if(subCategory.length>0){
+productsCopy=productsCopy.filter(item=>subCategory.includes(item.subCategory));
+}
+
 setFilteredProducts(productsCopy)
   }
 
   
-  React.useEffect(() => {
-    setFilteredProducts(products);
-  }, []);
+
 
   React.useEffect(() => {
     applyFilters();
