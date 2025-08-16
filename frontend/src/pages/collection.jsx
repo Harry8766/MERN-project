@@ -5,7 +5,7 @@ import Title from './../components/Title';
 import ProductItem from './../components/ProductItem';
 
 const collection = () => {
-  const {products}=React.useContext(ShopContext);
+  const {products,search,showSearch}=React.useContext(ShopContext);
   const[showFilter,setShowFilter]=React.useState(false);
   const [filterProducts, setFilteredProducts] = React.useState([]);
   const[category,setCategory]=React.useState([]);
@@ -33,6 +33,13 @@ const collection = () => {
 
   const applyFilters = () => {
 let productsCopy=products.slice();
+
+if(showSearch&&search){
+
+productsCopy=productsCopy.filter(item=>item.name.toLowerCase().includes(search.toLowerCase()));
+
+}
+
 if(category.length>0){
 productsCopy=productsCopy.filter(item=>category.includes(item.category));
 }
@@ -67,11 +74,12 @@ setFilteredProducts(productsCopy)
 
   React.useEffect(() => {
     applyFilters();
-  }, [category, subCategory]);
+  }, [category, subCategory,search,showSearch]);
 
   React.useEffect(() => {
     sortProducts();
   }, [sortType]);
+
 
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
