@@ -34,7 +34,7 @@ useEffect(()=>{
                 <ProductItem key={index} id={item._id} name={item.name} image={item.image} price={item.price} />
             ))}
         </div>
-        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus nostrum tempora, illo animi cum numquam dolore repellat ipsa quasi consectetur, explicabo excepturi, necessitatibus reiciendis saepe facere ratione illum doloremque quaerat amet iure? Saepe sunt rerum laboriosam, sapiente alias facere deleniti itaque atque iste. Distinctio dolor sequi unde quia, quasi inventore aspernatur consectetur harum ipsum quo sed nisi ullam provident in. Natus, nisi! Voluptatem, quis eveniet ullam facilis sint harum architecto accusantium corporis eius magni incidunt nisi hic eaque dolorum autem. Est quae natus accusamus sed obcaecati quo, molestias maiores provident, rerum et velit, numquam quidem distinctio voluptas? Quo, incidunt natus.</p>
 
 
     </div>
