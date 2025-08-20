@@ -1,6 +1,7 @@
 import { createContext,useState,useEffect } from "react";
 import {products} from '../assets/assets';
 import { toast } from 'react-toastify';
+import cart from "../pages/cart";
 
 
  export const ShopContext = createContext();
@@ -61,11 +62,19 @@ import { toast } from 'react-toastify';
         return totalCount;
     }
 
+    const updateQuantity = async(itemId,size,quantity)=>{
+        let cartData=structuredClone(cartItems);
+        cartData[itemId][size] = quantity;
+
+        setCartItems(cartData);
+        
+    }
+
             
     const value = {
             products,currency,
             delivery_fee,search,setSearch,showSearch,setShowSearch,
-            cartItems,addToCart,getCartCount
+            cartItems,addToCart,getCartCount,updateQuantity
     }
     return(
         <ShopContext.Provider value={value}>
