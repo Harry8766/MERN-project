@@ -89,9 +89,7 @@ const placeOrder = () => {
         </div>
 
       </div>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias iste hic quaerat molestiae, ipsum vitae aperiam voluptatem esse. Cupiditate voluptatibus nam debitis non dolorem dignissimos vel aperiam culpa dolore facere reprehenderit laudantium consequuntur repellendus accusantium et quia odit porro sunt unde, molestias exercitationem quis? Itaque dolorum nobis praesentium sed nostrum ad, ab blanditiis porro accusantium nemo quibusdam! Repellendus voluptate saepe sit dolorum rerum autem deleniti vitae. Quae dicta nobis consequatur, velit quod beatae quidem temporibus libero ad possimus? Consectetur, quae! Natus perferendis officia, nam sequi accusamus quia ut, praesentium error fuga consequuntur ab blanditiis suscipit earum rem, similique delectus quam.
-            </p>
+           
     </div>
     
   )
